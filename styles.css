@@ -39,7 +39,7 @@ main{
     width: 50%;
     position: relative;
     font-family: 'Inter', sans-serif;
-    font-size: 32px;
+    font-size: 2.8vw;
 }
 .text-flare{
     width: 30%;
@@ -204,8 +204,8 @@ main{
         left: 35%;
     }
     .text-words{
+        font-size: 5vw;
        max-height: 350px;
-       font-size: 18px;   
     }
     .text-author{
         font-size: 16px;
@@ -234,7 +234,7 @@ main{
         text-align: center;
     }
     .text-flare{
-        top: 20%;
+        top: 0%;
         left: 35%;
     }
     .review-picture{
