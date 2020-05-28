@@ -12,6 +12,7 @@ main{
     width: 100%;
     height: 100%;
     position: relative;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,20 +30,20 @@ main{
 .review{
     display: flex;
     align-items: center;
-    width: 70%;
+    width: 80%;
+    height: 50%;
 }
 
 .review-text{
-    height: 100%;
+    height: 80%;
     width: 50%;
-    margin-top: auto;
     position: relative;
-    margin-top: -10px;
     font-family: 'Inter', sans-serif;
     font-size: 32px;
 }
 .text-flare{
-    top: -60px;
+    width: 30%;
+    top: -100px;
     left: 100px;
 }
 
@@ -51,52 +52,62 @@ main{
     color: hsl(240, 38%, 20%);
 }
 
+.text-person{
+    margin-top: 20px;
+    display: flex;
+}
 .text-author{
-    margin-top: 40px;
     font-weight: 700;
     font-size: 24px;
 }
 
 .text-job{
-    color:hsl(240, 18%, 77%)
+    color:hsl(240, 18%, 77%);
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .review-picture{
+    min-width: 220px;
+    min-height: 220px;
     margin-left: auto;
-    width: 500px;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
+    width: 50%;
+    height: 0;
+    padding-bottom: 50%;
 }
 
 .picture-flare{
-    z-index: -1;
-    height: 120%;
-    width: 120%;
+    position: absolute;
+    z-index: -2;
+    left: -15%;
+    top: -15%;
+    width: 130%;
+    height: 130%;
     object-position: center;
 }
 
 .picture-image{
     position: absolute;
+    left: -5%;
+    top: -5%;
     height: 110%;
     width: 110%;
-    object-fit: cover;
-    object-position: center;
-   z-index: -1;
-   border-radius: 20px;
-   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.151);
+    /* object-fit: cover;
+    object-position: center; */
+    z-index: -1;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.151);
 }
 
 .slider{
     position: absolute;
-    left: 0px;
-    bottom: -40px;
     width: 100px;
     height: 40px;
     display: flex;
     padding: 13px;
+    bottom: -10%;
+    z-index: 1;
     border-radius: 17px;
     justify-content: space-around;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.37);
@@ -174,41 +185,40 @@ main{
     }
     .review{
         margin-top: 50px;
+        height: 100%;
+        width: 80%;
         flex-direction: column;
     }
     .review-text{
         order: 2;
         width: 100%;
         height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         text-align: center;
     }
+    .text-person{
+        flex-direction: column;
+    }
     .text-flare{
-        top: -50px;
-        left: 20%;
+        top: 10px;
+        left: 35%;
     }
     .text-words{
        max-height: 350px;
+       font-size: 20px;
         
     }
     .text-author{
         font-size: 16px;
     }
 
-    .picture-image{
-        width: 100%;
-        height: 100%;
-    }
     .review-picture{
         margin-left: 0px;
-        margin-bottom: 50px;
+        margin-bottom: 5%;
         order: 1;
-        width: 400px;
-        height: 400px;
     }
 
-    .slider{
-        bottom: -20px;
-        left: 150px;
-    }
 
 }
