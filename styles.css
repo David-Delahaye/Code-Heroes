@@ -199,7 +199,7 @@ main{
         height: 100%;
     }
     .review-picture{
-        margin-left: none;
+        margin-left: 0px;
         margin-bottom: 50px;
         order: 1;
         width: 400px;
