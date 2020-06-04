@@ -10,17 +10,16 @@ class Slider {
             <div class="review-text">
                 <img class="text-flare flare" src="images/pattern-quotes.svg" alt="">
                 <p class="text-words">${this.select.text}</p>
-                <div class="text-person"><p class="text-author">${this.select.name} \u00A0</p><p class="text-job"> ${this.select.job}</p></div>
+                <div class="text-person"><p class="text-author">${this.select.name}</p><p class="text-job"> ${this.select.job}</p></div>
             </div>
 
             <div class="review-picture">
                 <img class="picture-flare flare" src="images/pattern-bg.svg" alt="">
                 <img class="picture-image" src=${this.select.img} alt="">
             </div>
-
             <div class="slider">
-            <img class="slider-prev" src="images/icon-prev.svg" alt="">
-            <img class="slider-next" src="images/icon-next.svg" alt="">
+                <img class="slider-prev" src="images/icon-prev.svg" alt="">
+                <img class="slider-next" src="images/icon-next.svg" alt="">
             </div>
         `
 
@@ -30,6 +29,8 @@ class Slider {
         this.imageDisplay = document.querySelector('.picture-image');
 
         this.prev.addEventListener('click', function(){
+            console.log('here');
+            
             this.change(-1);
             this.display();
         }.bind(this))
@@ -56,7 +57,7 @@ display = ()=>{
         this.textDisplay.innerHTML = `
         <img class="text-flare flare" src="images/pattern-quotes.svg" alt="">
         <p class="text-words">${this.select.text}</p>
-        <div class="text-person"><p class="text-author">${this.select.name} \u00A0</p><p class="text-job">${this.select.job}</p></div>`
+        <div class="text-person"><p class="text-author">${this.select.name} </p><p class="text-job">${this.select.job}</p></div>`
     this.imageDisplay.src = this.select.img;
     this.root.classList.remove('fadeOut')
     this.root.classList.add('fadeIn')

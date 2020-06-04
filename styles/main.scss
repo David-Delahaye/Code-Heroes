@@ -3,7 +3,7 @@
     font-family: 'Inter', sans-serif;
     position: relative;
     height: 100%;
-    width: 90%;
+    width: fit-content;
     max-width: 40rem;
     box-sizing: border-box;
     padding: 1rem;
@@ -11,17 +11,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid purple;
+    background-color: rgb(255, 251, 255);
+    z-index: 1;
     .review-text{
         order: 2;
         position: relative;
         display: flex;
         flex-direction: column;
-        width: 50%;
+        width: 80%;
         height: 50%;
         .text-flare{
             position: absolute;
-            left: 50%;
+            left: 40%;
             top: 5%;
         }
         .text-words{
@@ -29,13 +30,17 @@
         }
         .text-person{
             display: flex;
+            flex-direction: column;
             margin-top: 1rem;
             align-items: flex-end;
+
             .text-author{
                 font-weight: 800;
+                margin:0;
                 font-size: 1.1em;
             }
             .text-job{
+                margin: 0 0 2rem 0;
                 color: hsl(240, 18%, 77%);
                 font-weight: 300;
                 font-size: 0.9em;
@@ -157,6 +162,9 @@
     }
     .review{
         flex-direction: row;
+        .review-text{
+            width: 60%;
+        }
     }
 }
 

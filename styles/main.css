@@ -3,7 +3,9 @@
   font-family: 'Inter', sans-serif;
   position: relative;
   height: 100%;
-  width: 90%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   max-width: 40rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -19,7 +21,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid purple;
+  background-color: #fffbff;
+  z-index: 1;
 }
 
 .review .review-text {
@@ -34,13 +37,13 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50%;
+  width: 80%;
   height: 50%;
 }
 
 .review .review-text .text-flare {
   position: absolute;
-  left: 50%;
+  left: 40%;
   top: 5%;
 }
 
@@ -52,6 +55,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 1rem;
   -webkit-box-align: end;
       -ms-flex-align: end;
@@ -60,10 +67,12 @@
 
 .review .review-text .text-person .text-author {
   font-weight: 800;
+  margin: 0;
   font-size: 1.1em;
 }
 
 .review .review-text .text-person .text-job {
+  margin: 0 0 2rem 0;
   color: #babacf;
   font-weight: 300;
   font-size: 0.9em;
@@ -259,6 +268,9 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .review .review-text {
+    width: 60%;
   }
 }
 
